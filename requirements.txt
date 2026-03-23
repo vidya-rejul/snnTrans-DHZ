@@ -1,8 +1,0 @@
-spikingjelly
-torchvision
-torchsummary
-tqdm
-scikit-image
-brisque
-opencv-python
-scikit-learn
