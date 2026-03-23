@@ -48,7 +48,7 @@ Underwater images are first transformed into **time-dependent sequences**, then 
 - **Energy efficiency improvement:** 3.3× over the lightest transformer-based state-of-the-art baseline  
 
 <p align="center">
-  <img src="assets/quantitative_tables.jpg" width="78%">
+  <img src="assets/quantitative_table.jpg" width="78%">
 </p>
 <p align="center">
   <em>Performance evaluation with state-of-the-art spiking based underwater image enhancement method.</em>
@@ -64,34 +64,66 @@ Underwater images are first transformed into **time-dependent sequences**, then 
 </p>
 
 ---
-
-## Repository Structure
+## Getting Started
+**Repository Structure**:
 
 ```bash
 .
-├── checkpoints/           # Saved model checkpoints
-├── data/                  # Training / testing data
-├── dehazed_images/        # Output restored images
+├── checkpoints/        # Saved model checkpoints
+├── data/               # Training / testing data
+├── dehazed_images/     # Output restored images
 ├── .gitattributes
-├── dataset_rgblab.py      # Dataset preparation 
+├── dataset_rgblab.py   # Dataset preparation
 ├── README.md
-├── snntrans_model.py      # Model architecture
-├── snntrans_test.py       # Inference script
-└── snntrans_train.py      # Training script
+├── snntrans_model.py   # Model architecture
+├── snntrans_test.py    # Inference script
+└── snntrans_train.py   # Training script
+```
+For installation, setup, and usage, please use the training and testing scripts provided in the repository. 
 
-## Getting Started
-
-For installation, setup, and usage, please use the training and testing scripts provided in the repository.
-
-### Requirements
-
+**Requirements**:
 - Python 3.8+
 - PyTorch
-- Additional dependencies listed in `requirements.txt`
+- Additional dependencies listed in requirements.txt
 
 Install dependencies with:
-
 ```bash
 pip install -r requirements.txt
+```
 
-Training
+**Training**:
+```bash
+python snntrans_train.py
+```
+
+**Inference**:
+```bash
+python snntrans_test.py
+```
+
+**Notes**:
+- Pretrained checkpoints are placed in `./checkpoints/`
+- Dehazed outputs are saved in `./dehazed_images/`
+
+## Datasets
+
+The model is trained and evaluated on the following public underwater benchmarks: (i) [UIEB](https://li-chongyi.github.io/proj_benchmark.html) and (ii) [EUVP](https://irvlab.cs.umn.edu/resources/euvp-dataset). Please update dataset paths inside the scripts according to your local setup.
+
+## Citation
+If you find this work useful in your research, please cite:
+```
+@article{Sudevan2026snnTransDHZ,
+  title={Spiking transformer with learnable threshold mechanism for underwater image dehazing to aid vision-based navigation},
+  author={Sudevan, Vidya and Kausar, Rizwana and Javed, Sajid and Karki, Hamad and De Masi, Giulia and Dias, Jorge},
+  journal={Neuromorphic Computing and Engineering},
+  volume={6},
+  number={1},
+  pages={014010},
+  year={2026},
+  doi={10.1088/2634-4386/ae41e1}
+}
+```
+For further help or clarification required, please contact `vidyarejul@gmail.com/ vidya.sudevan@ku.ac.ae`
+
+## Thanks
+Our implementation are based on [Spike-Driven-Transformer-V2](https://github.com/BICLab/Spike-Driven-Transformer-V2) and [SpikingJelly](https://spikingjelly.readthedocs.io/zh-cn/latest/tutorials/en/spikformer.html) tutorials. We gratefully thank the authors for their wonderful contributions.
