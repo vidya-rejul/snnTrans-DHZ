@@ -84,7 +84,7 @@ For installation, setup, and usage, please use the training and testing scripts 
 **Requirements**:
 - Python 3.8+
 - PyTorch
-- Additional dependencies listed in requirements.txt
+- Additional dependencies listed in `requirements.txt`
 
 Install dependencies with:
 ```bash
