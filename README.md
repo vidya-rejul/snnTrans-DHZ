@@ -40,6 +40,29 @@ The proposed **snnTrans-DHZ** architecture is built around three main modules:
 
 Underwater images are first transformed into **time-dependent sequences**, then represented in **LAB color space**, and finally processed through the spiking-transformer framework using **surrogate gradient-based backpropagation through time**.
 
+## Efficiency
+
+- **Parameters:** 0.5670M  
+- **Computational cost:** 7.42 GSOPs  
+- **Energy consumption:** 0.151 J  
+- **Energy efficiency improvement:** 3.3× over the lightest transformer-based state-of-the-art baseline  
+
+<p align="center">
+  <img src="assets/quantitative_tables.jpg" width="78%">
+</p>
+<p align="center">
+  <em>Performance evaluation with state-of-the-art spiking based underwater image enhancement method.</em>
+</p>
+
+## Qualitative Results
+
+<p align="center">
+  <img src="assets/qualitative_results.png" width="92%">
+</p>
+<p align="center">
+  <em>Qualitative comparison on various underwater scenes.</em>
+</p>
+
 ---
 
 ## Repository Structure
@@ -55,3 +78,20 @@ Underwater images are first transformed into **time-dependent sequences**, then 
 ├── snntrans_model.py      # Model architecture
 ├── snntrans_test.py       # Inference script
 └── snntrans_train.py      # Training script
+
+## Getting Started
+
+For installation, setup, and usage, please use the training and testing scripts provided in the repository.
+
+### Requirements
+
+- Python 3.8+
+- PyTorch
+- Additional dependencies listed in `requirements.txt`
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
+
+Training
